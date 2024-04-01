@@ -1,0 +1,20 @@
+# list products
+check_city = "//div[@class='choosing-city']/button/text()"
+list_products = ".//div[@class='app-filter__main']//div"
+href = ".//div[@class='product-top']/a/@href"
+# card product
+name = ".//div[@class='product-top__title-wrapper']/h1/text()"
+current = ".//div[@class='price-info']/div[1]/span/text()"
+original = ".//div[@class='price-info']/div[2]/text()"
+image = ".//div[@class='product-picture']/img/@src"
+brand = ".//div[@class='product-info__brand']/div[2]/a/text()"
+marketing_tags = ".//div[@class='badges product-picture__badges-position']/div/text()"
+sections = ".//nav[@class='breadcrumbs-wrapper app-header__breadcrumbs']/ul//li"
+section = ".//span/text()"
+in_stock = ".//div[@class='another-city__city']"
+variants = "(.//div[@class='product-quantity'])[last()]/div[@class='quantity-items-wrapper']//div"
+# metadata path's
+metadata = ".//div[@class='product-instruction__guide']//div"
+meta_key = "./h3/text()"
+meta_value = ".//h3/following-sibling::node()//text()"
+div_text = "./text()"
