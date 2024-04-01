@@ -58,7 +58,7 @@
 
 
 ```bash
-git clone https://github.com/AndreyKilanov/parser_testovoe
+git clone git@github.com:AndreyKilanov/parser_testovoe.git
 ```
 
 ```bash
