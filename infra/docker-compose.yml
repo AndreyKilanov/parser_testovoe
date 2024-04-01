@@ -1,0 +1,24 @@
+services:
+  flaresolver:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolver
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_HTML=${LOG_HTML:-false}
+      - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none}
+      - TZ=Europe/London
+    ports:
+      - "${PORT:-8191}:8191"
+    restart: unless-stopped
+
+  backend:
+    container_name: backend
+    build:
+      context:
+        ../src
+      dockerfile: Dockerfile
+    depends_on:
+      - flaresolver
+    volumes:
+      - ../src:/app
+    restart: on-failure:5
